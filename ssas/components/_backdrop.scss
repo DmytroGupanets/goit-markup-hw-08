@@ -1,0 +1,221 @@
+/* Backdrop */
+
+.backdrop.backdrop--is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms linear;
+}
+
+/* Modal window */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms linear;
+
+  max-width: 528px;
+  max-height: 581px;
+  background-color: $mainWhiteColor;
+
+  padding: 40px;
+
+  .backdrop--is-hidden & {
+    transform: translate(-50%, -50%) scale(0.4);
+  }
+}
+
+/* CLOSE ICON */
+.close-button {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+
+  padding: 0;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: $mainWhiteColor;
+  cursor: pointer;
+}
+
+.close-button__icon {
+  display: inline-flex;
+  position: relative;
+  top: 2px;
+
+  width: 18px;
+  height: 18px;
+
+  .close-button:focus &,
+  .close-button:hover & {
+    fill: $mainAccentColor;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Modal window title */
+
+.modal__title {
+  margin-bottom: 12px;
+
+  color: $secondaryTextColor;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+}
+
+/* Modal form fields */
+.form-field {
+  margin-bottom: 10px;
+}
+
+.form-field__label {
+  display: block;
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+
+.form-field__input-area {
+  position: relative;
+}
+
+.form-field__icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  left: 12px;
+  pointer-events: none;
+
+  transform: translateY(-50%);
+  fill: $secondaryTextColor;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .form-field__input-area:focus-within &,
+  .form-field__input-area:hover & {
+    fill: $mainAccentColor;
+  }
+}
+
+.form-field__input {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus-within,
+  &:hover {
+    border: 1px solid $mainAccentColor;
+    outline: none;
+  }
+}
+
+/* Comment field */
+.form-field__comment-input {
+  box-sizing: border-box;
+  padding: 12px 16px;
+  width: 100%;
+
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus-within,
+  &:hover {
+    border: 1px solid $mainAccentColor;
+    outline: none;
+  }
+}
+
+/* AGREEMENT FIELD */
+
+.agreement-field {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 42px;
+}
+
+.agreement-field__label {
+  position: relative;
+}
+
+.agreement-field__input {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 16px;
+  height: 15px;
+}
+
+.agreement-field__icon {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: -25px;
+  fill: $mainWhiteColor;
+  stroke: $mainWhiteColor;
+  width: 16px;
+  height: 15px;
+  border: 2px solid $secondaryTextColor;
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .agreement-field__input:checked + & {
+    border-color: $mainAccentColor;
+    background-color: $mainAccentColor;
+  }
+}
+
+.agreement-field__link {
+  color: $mainAccentColor;
+}
+
+/* SUBMIT BUTTON */
+
+.modal-submit {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-submit__button {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 10px 55px;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  color: $mainWhiteColor;
+  background-color: $mainAccentColor;
+  letter-spacing: 0.06em;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: hidden;
+  cursor: pointer;
+}
