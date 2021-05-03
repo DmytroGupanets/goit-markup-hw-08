@@ -1,14 +1,31 @@
 .features {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -30px;
-
+  margin-bottom: -30px;
   @extend %list;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
 }
 
 .features__item {
-  margin-right: 30px;
-  flex-basis: calc((100% - 120px) / 4);
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 30px;
+
+    flex-basis: calc((100% - 60px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+    flex-basis: calc((100% - 120px) / 4);
+  }
 }
 
 .features__icon-wrapper {
@@ -34,4 +51,9 @@
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    text-align: start;
+  }
 }

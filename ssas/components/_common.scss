@@ -36,8 +36,13 @@ body.modal-open {
 
 /* Standart section paddings */
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 /* Container */
@@ -58,5 +63,23 @@ body.modal-open {
 
   @media screen and (min-width: 1200px) {
     width: 1200px;
+  }
+}
+
+// Secondary titles ("Чем мы занимаемся", "Наша команда", "Наши клиенты").
+
+.secondary-titles {
+  margin-bottom: 30px;
+
+  color: $secondaryTextColor;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
   }
 }

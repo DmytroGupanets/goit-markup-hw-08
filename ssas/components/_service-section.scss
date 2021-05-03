@@ -1,15 +1,8 @@
 .services-section {
   padding-top: 0;
-}
-
-.secondary-titles {
-  margin-bottom: 50px;
-
-  color: $secondaryTextColor;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 
 .services {
