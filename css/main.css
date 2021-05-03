@@ -1322,6 +1322,7 @@ body.modal-open {
 
 /* Modal window */
 .modal {
+  position: relative;
   -webkit-transition: -webkit-transform 250ms linear;
   transition: -webkit-transform 250ms linear;
   transition: transform 250ms linear;
