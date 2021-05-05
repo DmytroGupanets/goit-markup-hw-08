@@ -83,3 +83,15 @@ body.modal-open {
     line-height: 1.17;
   }
 }
+
+// Animation for mobile burger menu
+
+@keyframes mobileMenu {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
