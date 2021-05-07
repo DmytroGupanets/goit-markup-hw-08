@@ -14,15 +14,21 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1200px) {
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: baseline;
+  }
+}
+
+// Footer left side
+.footer-left-side {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-bottom: 60px;
   }
 
   @media screen and (min-width: 1200px) {
-    justify-content: space-between;
+    flex-direction: row;
+    width: calc((100% - 30px) / 2);
   }
 }
 
@@ -34,9 +40,9 @@
   width: 231px;
   margin-bottom: 60px;
 
-  @media screen and (min-width: 1200px) {
-    margin-left: 0;
-    margin-right: 0;
+  @media screen and (min-width: 738px) {
+    margin: 0;
+    flex-basis: calc((100% - 30px) / 2);
   }
 }
 
@@ -46,6 +52,10 @@
 
   text-align: center;
   color: $mainWhiteColor;
+
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
 }
 
 /* Our address and contacts*/
@@ -101,9 +111,10 @@
   width: 206px;
   margin-bottom: 60px;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     margin-right: 0;
-    margin-left: 0;
+    margin-left: 30px;
+    flex-basis: calc((100% - 30px) / 2);
   }
 }
 
@@ -151,12 +162,17 @@
 .subscription {
   width: 100%;
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    width: 450px;
+  @media screen and (min-width: 768px) {
+    margin-left: auto;
+    margin-right: auto;
+
+    width: calc(100% - 39%);
   }
 
   @media screen and (min-width: 1200px) {
-    width: 570px;
+    width: calc((100% - 30px) / 2);
+    margin-left: 30px;
+    margin-right: 0;
   }
 }
 
