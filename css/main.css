@@ -1098,6 +1098,9 @@ body.modal-open {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
 }
 
@@ -1111,11 +1114,15 @@ body.modal-open {
 }
 @media screen and (min-width: 1200px) {
   .footer-left-side {
+    margin-bottom: 0;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
     width: calc((100% - 30px) / 2);
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
 }
 
